@@ -6,16 +6,13 @@
         <groupId>com.prolis.businessdomain</groupId>
         <artifactId>businesdomain</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
-
     <groupId>com.prolis</groupId>
-    <artifactId>paciente</artifactId>
+    <artifactId>pais</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>paciente</name>
-    <description>paciente</description>
-    <properties>
-        <java.version>17</java.version>
-    </properties>
+    <name>pais</name>
+    <description>pais</description>
 
 
     <build>
