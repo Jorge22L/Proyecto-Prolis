@@ -3,12 +3,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.prolis.businessdomain</groupId>
+        <groupId>org.prolis.businessdomain</groupId>
         <artifactId>businesdomain</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+
     </parent>
-    <groupId>com.prolis</groupId>
+    <groupId>org.prolis</groupId>
     <artifactId>pais</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>pais</name>

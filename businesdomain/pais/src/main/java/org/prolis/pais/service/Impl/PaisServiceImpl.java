@@ -4,16 +4,15 @@ import lombok.RequiredArgsConstructor;
 import org.prolis.pais.entity.Pais;
 import org.prolis.pais.repository.PaisRepository;
 import org.prolis.pais.service.PaisService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
 public class PaisServiceImpl implements PaisService {
-
-    @Autowired
     private final PaisRepository paisRepository;
     @Override
     public Pais guardarPais(Pais p) {
@@ -21,22 +20,26 @@ public class PaisServiceImpl implements PaisService {
     }
 
     @Override
-    public Pais listarPorId(Long id) {
-        return null;
+    public Optional<Pais> listarPorId(Long id) {
+        return paisRepository.findById(id);
     }
 
     @Override
+    @Transactional(readOnly = true)
     public List<Pais> obtenerPais() {
         return paisRepository.findAll();
     }
 
     @Override
     public Pais actualizarPais(Pais p) {
-        return null;
+        Pais consulta = paisRepository.findById(p.getIdpais()).get();
+        consulta.setDescripcion(p.getDescripcion());
+        return paisRepository.save(consulta);
+
     }
 
     @Override
     public void eliminarPais(Long id) {
-
+        paisRepository.deleteById(id);
     }
 }

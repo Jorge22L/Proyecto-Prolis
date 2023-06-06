@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.prolis</groupId>
+        <groupId>org.prolis</groupId>
         <artifactId>prolis</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <groupId>com.prolis.businessdomain</groupId>
+    <groupId>org.prolis.businessdomain</groupId>
     <artifactId>businesdomain</artifactId>
     <packaging>pom</packaging>
 
@@ -95,5 +95,8 @@
 
     <modules>
         <module>paciente</module>
+        <module>departamento</module>
+        <module>pais</module>
+        <module>municipio</module>
     </modules>
 </project>
